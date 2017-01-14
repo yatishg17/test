@@ -1,0 +1,291 @@
+    1  exit
+    2  uname -a
+    3  cat /etc/redhat-release 
+    4  arch
+    5  yum repolist
+    6  sudo yum install epel-release
+    7  sudo yum install ansible -y
+    8  ansible
+    9  ansible --version
+   10  mkdir ansible
+   11  cd ansible/
+   12  ls
+   13  vi inventory
+   14  cat inventory 
+   15  ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   16  ssh 192.168.56.20
+   17  cat ~/.ssh/known_hosts 
+   18  ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   19  ssh 192.168.56.10
+   20  ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   21  ansible 192.168.56.20 -i inventory -u vagrant -m ping -k
+   22  ls
+   23  ipconfig
+   24  ifconfig
+   25  ping yahoo.com
+   26  cd
+   27  ll
+   28  ls -a
+   29  ll -a
+   30  sudo ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   31  cd ansible/
+   32  sudo ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   33  ssh local
+   34  ssh 192.168.56.10
+   35  sudo ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   36  ssh 192.168.56.20
+   37  sudo ansible 192.168.56.10 -i inventory -u vagrant -m ping -k
+   38  ansible all -i inventory -u vagrant -m ping -k
+   39  ansible all -i inventory -u vagrant -m ping -k -v
+   40  ansible all -i inventory -u vagrant -m ping -k -vvv
+   41  ls
+   42  ansible all -i inventory -u vagrant -m ping -k -v
+   43  vim inventory2
+   44  ll
+   45  vim inventory2
+   46  vim inventory
+   47  vi inventory2
+   48  ansible srv1 -i inventory2 -m ping
+   49  vim /etc/hosts
+   50  vi /etc/hosts
+   51  sudo vi /etc/hosts
+   52  ansible srv1 -i inventory2 -m ping
+   53  ssh srv1
+   54  ansible srv1 -i inventory2 -m ping
+   55  ansible all -i inventory2 -m ping
+   56  ansible srv1 -i inventory2 -m ping
+   57  vi inventory2
+   58  ansible my -i inventory2 -m ping
+   59  vi inventory2
+   60  ansible my -i inventory2 -m ping
+   61  ansible all -i inventory2 -m ping
+   62  ssh srv2
+   63  sudo vi /etc/hosts
+   64  ansible all -i inventory2 -m ping
+   65  ansible my -i inventory2 -m ping
+   66  vi inventory2
+   67  tee
+   68  tree
+   69  sudo yum install tree
+   70  tree
+   71  cd 
+   72  ll
+   73  ll -a
+   74  vim /etc/ansible/ansible.cfg 
+   75  vi /etc/ansible/ansible.cfg 
+   76  sudo vi /etc/ansible/ansible.cfg 
+   77  whereis python
+   78  ansible-doc -1
+   79  ansible-doc -l
+   80  ansible-doc l
+   81  ansible-doc 
+   82  ansible-doc yum
+   83  cd ansible/
+   84  ll
+   85  vim inventory
+   86  vi inventory2
+   87  ansible -i inventory2 -m yum -a "name=httpd state=present" 
+   88  ansible my -i inventory2 -m yum -a "name=httpd state=present" 
+   89  ansible my -i inventory2 -m yum -a "name=httpd state=present" --sudo
+   90  ansible-doc apt-get
+   91  ansible-doc apt
+   92  ansible my -i inventory2 -m apt -a "name=httpd state=present" --sudo
+   93  ansible my -i inventory2 -m yum -a "name=httpd state=present" --sudo
+   94  ansible my -i inventory2 -m apt -a "name=apache2 update_cache=yes state=latest" --sudo
+   95  ansible my -i inventory2 -m service -a "name=httpd enabled=yes state=started" --sudo
+   96  ansible my -i inventory2 -m service -a "name=apache2 enabled=yes state=started" --sudo
+   97  service httpd status
+   98  sudo service httpd status
+   99  ansible my -i inventory2 -m setup
+  100  ansible my -i inventory2 -m setup -a "filter=ansible_eth*"
+  101  ansible my -i inventory2 -m setup -a "filter=ansible_ipv4"
+  102  ansible my -i inventory2 -m setup -a "filter=ipv4"
+  103  clear
+  104  ll
+  105  l
+  106  ll
+  107  '
+
+  108  ll
+  109  yum install git-core
+  110  sudo yum install git-core
+  111  ll
+  112  cd
+  113  ll
+  114  mkdir proj
+  115  cd proj/
+  116  git init
+  117  ll
+  118  ls -a
+  119  git version
+  120  git config --system
+  121  whereis gitconfig
+  122  which gitconfig
+  123  git-shell
+  124  gti config --global --list
+  125  git config --global --list
+  126  git config --global user.name "yatish"
+  127  git config --global user.email "yatish.g@hotmail.com"
+  128  git config --global --list
+  129  ls -a
+  130  cat ~/.gitconfig 
+  131  git config --global core.editor vim
+  132  git config --global help.autocorrect 1
+  133  git statu
+  134  git config --global color.ui auto
+  135  git status
+  136  git config --glocal core.autocrlf true
+  137  git config --global core.autocrlf true
+  138  git config --global core.autocrlf input
+  139  git config --global --list
+  140  at ~/.gitconfig 
+  141  cat ~/.gitconfig 
+  142  git status
+  143  cat .git/config 
+  144  git config user.name "yakrish"
+  145  git config list
+  146  git config --list
+  147  cat ~/.gitconfig 
+  148  cat .git/config 
+  149  ll .git/
+  150  echo "this is test" > readme.txt
+  151  git status
+  152  git add readme.txt 
+  153  git status
+  154  git commit
+  155  git log
+  156  vim readme.txt 
+  157  git status
+  158  git add -U
+  159  git add -u
+  160  git status
+  161  git commit -m "udpated second time"
+  162  git log
+  163  git diff 35d6..fb0e
+  164  git diff HEAD~1..HEAD
+  165  git diff HEAD~1..
+  166  touch file1.txt file2.txt
+  167  git status
+  168  git add -u
+  169  git status
+  170  git add -A
+  171  git commit -m "added more files"
+  172  git status
+  173  git diff HEAD~1..
+  174  vim file1.txt 
+  175  vim readme.txt 
+  176  git status
+  177  git add file.txt
+  178  git add file1.txt
+  179  git status
+  180  git commmit -m "updated in file1"
+  181  git add readme.txt 
+  182  git status
+  183  git commit -u "updated readme file"
+  184  git commit -m "updated readme file"
+  185  git status
+  186  git diff HEAD..
+  187  rm file2.txt 
+  188  git status
+  189  git add -u
+  190  git status
+  191  git commit -m "deleted file2"
+  192  git log
+  193  git status
+  194  vim readme.txt 
+  195  git status
+  196  git checkout
+  197  ll
+  198  cat readme.txt 
+  199  git checkout readme.txt 
+  200  cat readme.txt 
+  201  vim readme.txt 
+  202  git log
+  203  git reset --hard
+  204  git log
+  205  touch my.txt
+  206  git status
+  207  git add my.txt 
+  208  git commit -m "latest my"
+  209  git status
+  210  git log
+  211  l
+  212  ll
+  213  git clean
+  214  git clean -f
+  215  ll
+  216  git commit
+  217  vim my.txt 
+  218  git add my.txt 
+  219  git status
+  220  vim my.txt 
+  221  git commit my.txt 
+  222  git status
+  223  clear
+  224  git log --oneline
+  225  git log --oneline --graph
+  226  git shortlog
+  227  git show head
+  228  git show HEAD
+  229  git remote
+  230  git remote -v
+  231  git remote
+  232  git clone https://github.com/Khan/tota11y.git
+  233  ll
+  234  cd tota11y/
+  235  ll
+  236  cd ..
+  237  git remote
+  238  gir remote
+  239  git remote
+  240  git remote -v
+  241  cat .git/config 
+  242  git branch
+  243  git branch -r
+  244  cd tota11y/
+  245  ll
+  246  git remote
+  247  git remote -v
+  248  git remote -vv
+  249  git show HEAD
+  250  git shotlog
+  251  git show HEAD~1
+  252  git log --oneline
+  253  git shortline
+  254  git remote
+  255  git remote -v
+  256  ls -a
+  257  cat .git/config 
+  258  git branch
+  259  git branch -r
+  260  git pull origin upgrade-adt
+  261  git tag
+  262  cd ..
+  263  git log
+  264  git remote -v
+  265  git remote add origin https://github.com/yatishgopal/gittest.git
+  266  git fetch
+  267  git remote add origin https://github.com/yatishg17/test.git
+  268  vim .git/config 
+  269  git remote add origin https://github.com/yatishg17/test.git
+  270  git fetch
+  271  ls
+  272  git branch -r
+  273  git log origin/master
+  274  cd tota11y/
+  275  git log origin/master
+  276  cd ..
+  277  git commit
+  278  mv -R tota11y/ /
+  279  mv tota11y/ /
+  280  sudo mv tota11y/ /
+  281  ll
+  282  git commit
+  283  git commit remote
+  284  git merge origin/master
+  285  git remote
+  286  git reset
+  287  git remote
+  288  git merge origin/master
+  289  history
+  290  history > history.txt
