@@ -7,5 +7,5 @@ jobs:
           - name: checkout repo
             uses: actions/checkout@v4
           - name: install cowsay
-            run: apt get intall cowsay -y
+            run: apt get install cowsay -y
             
