@@ -8,11 +8,13 @@ jobs:
             uses: actions/checkout@v4
           - name: install cowsay
             run: sudo apt-get install -y cowsay
+          - name: echo cowsay
+            run: cowsay -f beefymiracle Hello Actions!!
     secondjob:
       needs: firstjob
       runs-on: ubuntu-latest
       steps:
         - name: echo cowsay
-          run: cowsay -f beefymiracle Hello Actions!!
+          run: echo "test"
 
             
