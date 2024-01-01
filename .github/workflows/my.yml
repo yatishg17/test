@@ -7,7 +7,7 @@ jobs:
           - name: checkout repo
             uses: actions/checkout@v4
           - name: install cowsay
-            run: apt-get install -y cowsay
+            run: sudo apt-get install -y cowsay
     secondjob:
       needs: firstjob
       runs-on: ubuntu-latest
