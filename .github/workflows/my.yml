@@ -1,0 +1,11 @@
+name: mytest_workflow
+on: [push]
+jobs:
+    firstjob:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout repo
+            uses: actions/checkout@v4
+          - name: install cowsay
+            run: apt get intall cowsay -y
+            
